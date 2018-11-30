@@ -6,31 +6,6 @@
     version: latest
 
 - type: replace
-  path: /addons/-
-  value:
-    name: bosh-dns-windows
-    include:
-      stemcell:
-      - os: windows1803
-    jobs:
-    - name: bosh-dns-windows
-      release: bosh-dns
-      properties:
-        api:
-          client:
-            tls: ((/dns_api_client_tls))
-          server:
-            tls: ((/dns_api_server_tls))
-        cache:
-          enabled: true
-        health:
-          client:
-            tls: ((/dns_healthcheck_client_tls))
-          enabled: true
-          server:
-            tls: ((/dns_healthcheck_server_tls))
-
-- type: replace
   path: /instance_groups/-
   value:
     name: windows-worker
