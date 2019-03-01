@@ -1,0 +1,14 @@
+- type: replace
+  path: /stemcells/-
+  value:
+    alias: windows
+    os: windows1803
+    version: 1803.6
+
+- type: replace
+  path: /releases/-
+  value:
+    name: "windows-tools"
+    version: "32"
+    url: "https://bosh.io/d/github.com/cloudfoundry-incubator/windows-tools-release?v=32"
+    sha1: "95b6dd94a0b12491afc95e62f393c4d519411239"
